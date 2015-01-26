@@ -83,7 +83,7 @@ if (typeof Object.create !== "function") {
             if (base.$elem.children().length === 0) {return false; }
             base.baseClass();
             base.eventTypes();
-            base.$userItems = base.$elem.children();
+            base.$userItems = base.$elem.children().filter(':not(.owl-hidden)');
             base.itemsAmount = base.$userItems.length;
             base.wrapItems();
             base.$owlItems = base.$elem.find(".owl-item");
